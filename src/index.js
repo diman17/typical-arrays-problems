@@ -1,12 +1,24 @@
 
 exports.min = function min (array) {
-  return 0;
+    if (arguments.length == 0 || array.length == 0) {
+        return 0
+    }
+    array.sort((a, b) => a - b)
+  return array[0];
 }
 
 exports.max = function max (array) {
-  return 0;
+    if (arguments.length == 0 || array.length == 0) {
+        return 0
+    }
+    array.sort((a, b) => b - a)
+  return array[0];
 }
 
 exports.avg = function avg (array) {
-  return 0;
+    if (arguments.length == 0 || array.length == 0) {
+        return 0
+    }
+    let sum = array.reduce((a, b) => a + b)
+    return sum/array.length
 }
